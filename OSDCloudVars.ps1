@@ -53,6 +53,7 @@ $Global:MyOSDCloud = [ordered]@{
 	CheckSHA1 = [bool]$true
 	BuildName = 'MEOW'
 	MSCatalogFirmware = [bool]$true
+	OSDCloudUnattend = [bool]$true
 }
 
 

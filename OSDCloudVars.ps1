@@ -54,6 +54,11 @@ $Global:MyOSDCloud = [ordered]@{
 	BuildName = 'MEOW'
 	MSCatalogFirmware = [bool]$true
 	OSDCloudUnattend = [bool]$true
+	DCUInstall = [bool]$true
+	DCUDrivers = [bool]$true
+	DCUFirmware = [bool]$true
+	DCUBIOS = [bool]$true
+	DellTPMUpdate = [bool]$true
 }
 
 

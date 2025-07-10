@@ -51,6 +51,7 @@ $Global:MyOSDCloud = [ordered]@{
 	AutopilotJsonObject = [bool]$True
 	Bitlocker = [bool]$true
 	CheckSHA1 = [bool]$true
+	BuildName = 'BUILD NAME HERE'
 }
 
 

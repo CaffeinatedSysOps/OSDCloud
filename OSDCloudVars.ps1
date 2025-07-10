@@ -47,6 +47,7 @@ $Global:MyOSDCloud = [ordered]@{
     ShutdownSetupComplete = [bool]$false #After Setup Complete, instead of Restarting to OOBE, just Shutdown
     SyncMSUpCatDriverUSB = [bool]$false #Sync any MS Update Drivers during WinPE to Flash Drive, saves time in future runs
 	ZTI = [bool]$true
+	SkipAutopilot = [bool]$false
 }
 
 

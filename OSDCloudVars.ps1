@@ -50,7 +50,7 @@ $Global:MyOSDCloud = [ordered]@{
 	SkipAutopilot = [bool]$false
 	AutopilotJsonObject = [bool]$True
 	Bitlocker = [bool]$true
-	CheckSHA1 = [bool] $true
+	CheckSHA1 = [bool]$true
 }
 
 

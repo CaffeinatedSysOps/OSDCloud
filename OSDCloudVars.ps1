@@ -25,10 +25,6 @@ $ScriptName = 'OSDCloudVars'
 $ScriptVersion = '25.7.10.3'
 Write-Host -ForegroundColor Green "$ScriptName $ScriptVersion"
 
-
-
-
-
 #Variables to define the Windows OS / Edition etc to be applied during OSDCloud
 $OSVersion = 'Windows 11' #Used to Determine Driver Pack
 $OSReleaseID = '23H2' #Used to Determine Driver Pack
@@ -40,14 +36,14 @@ $OSLanguage = 'en-us'
 
 #Set OSDCloud Vars
 $Global:MyOSDCloud = [ordered]@{
-    Restart = [bool]$true  #Enables OSDCloud automatically restarting
+    Restart = [bool]$false  #Enables OSDCloud automatically restarting
     RecoveryPartition = [bool]$true #Ensures a Recover partition is created, True is default unless on VM
     OEMActivation = [bool]$True #Attempts to look up the Windows Code in UEFI and activate Windows OS (SetupComplete Phase)
     WindowsUpdate = [bool]$true #Runs Windows Updates during Setup Complete
     WindowsUpdateDrivers = [bool]$true #Runs WU for Drivers during Setup Complete
     WindowsDefenderUpdate = [bool]$true #Run Defender Platform and Def updates during Setup Complete
     SetTimeZone = [bool]$True #Set the Timezone based on the IP Address
-    ClearDiskConfirm = [bool]$True #Skip the Confirmation for wiping drive before format
+    ClearDiskConfirm = [bool]$false #Skip the Confirmation for wiping drive before format
     ShutdownSetupComplete = [bool]$false #After Setup Complete, instead of Restarting to OOBE, just Shutdown
     SyncMSUpCatDriverUSB = [bool]$false #Sync any MS Update Drivers during WinPE to Flash Drive, saves time in future runs
 }

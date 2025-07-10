@@ -52,6 +52,7 @@ $Global:MyOSDCloud = [ordered]@{
 	Bitlocker = [bool]$true
 	CheckSHA1 = [bool]$true
 	BuildName = 'MEOW'
+	MSCatalogFirmware = [bool]$true
 }
 
 

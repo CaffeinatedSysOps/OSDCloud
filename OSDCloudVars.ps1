@@ -52,9 +52,7 @@ $Global:MyOSDCloud = [ordered]@{
 	Bitlocker = [bool]$false
 	CheckSHA1 = [bool]$true
 	MSCatalogFirmware = [bool]$true
-	SkipODT = [bool]$true
 	SkipOOBEDeploy = [bool]$false
-	#OSDCloudUnattend = [bool]$true
 }
 
 

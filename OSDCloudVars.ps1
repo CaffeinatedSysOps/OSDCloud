@@ -29,7 +29,7 @@ Write-Host -ForegroundColor Green "$ScriptName $ScriptVersion"
 $OSVersion = 'Windows 11' #Used to Determine Driver Pack
 $OSReleaseID = '23H2' #Used to Determine Driver Pack
 $OSName = 'Windows 11 23H2 x64'
-$OSEdition = 'Professional'
+$OSEdition = 'Pro'
 $OSActivation = 'Retail'
 $OSLanguage = 'en-us'
 

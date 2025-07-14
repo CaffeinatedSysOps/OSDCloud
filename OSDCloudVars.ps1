@@ -53,6 +53,7 @@ $Global:MyOSDCloud = [ordered]@{
 	CheckSHA1 = [bool]$true
 	MSCatalogFirmware = [bool]$true
 	SkipOOBEDeploy = [bool]$true
+ SetWiFi = [bool]$true
 }
 
 

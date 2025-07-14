@@ -29,8 +29,8 @@ Write-Host -ForegroundColor Green "$ScriptName $ScriptVersion"
 $OSVersion = 'Windows 11' #Used to Determine Driver Pack
 $OSReleaseID = '23H2' #Used to Determine Driver Pack
 $OSName = 'Windows 11 23H2 x64'
-$OSEdition = 'Enterprise'
-$OSActivation = 'Volume'
+$OSEdition = 'Pro'
+$OSActivation = 'Retail'
 $OSLanguage = 'en-us'
 
 
@@ -46,13 +46,13 @@ $Global:MyOSDCloud = [ordered]@{
     ClearDiskConfirm = [bool]$false #Skip the Confirmation for wiping drive before format
     ShutdownSetupComplete = [bool]$false #After Setup Complete, instead of Restarting to OOBE, just Shutdown
     SyncMSUpCatDriverUSB = [bool]$false #Sync any MS Update Drivers during WinPE to Flash Drive, saves time in future runs
-	ZTI = [bool]$false
+	ZTI = [bool]$true
 	SkipAutopilot = [bool]$true #autopilotconfig.json insecure and deprecated https://msendpointmgr.com/2024/03/25/autopilot-tenant-security-risk/
 	AutopilotJsonObject = [bool]$false
 	Bitlocker = [bool]$false
 	CheckSHA1 = [bool]$true
 	MSCatalogFirmware = [bool]$true
-	SkipOOBEDeploy = [bool]$false
+	SkipOOBEDeploy = [bool]true
 }
 
 

@@ -24,7 +24,7 @@ If you know to know a full list of variables, look here: https://github.com/OSDe
 $ScriptName = 'OSDCloudVars'
 $ScriptVersion = '25.7.10.3'
 $ScriptStamp = 'dev'
-Write-Host -ForegroundColor Green "$ScriptName $ScriptVersion $ScripStamp"
+Write-Host -ForegroundColor Green "$ScriptName $ScriptVersion $ScriptStamp"
 
 #Variables to define the Windows OS / Edition etc to be applied during OSDCloud
 $OSVersion = 'Windows 11' #Used to Determine Driver Pack
@@ -118,6 +118,8 @@ if (Test-DISMFromOSDCloudUSB){
     Start-DISMFromOSDCloudUSB
 }
 #>
+
+Write-Host -ForegroundColor Green "Cleaning up..." 
 
 remove-item 'c:\Drivers\*.*' -recurse -force -erroraction silentlycontinue | out-null
 

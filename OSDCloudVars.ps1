@@ -55,6 +55,7 @@ $Global:MyOSDCloud = [ordered]@{
 	MSCatalogFirmware = [bool]$true
 	SkipOOBEDeploy = [bool]$false
  SetWiFi = [bool]$false
+ ScreenshotCapture = $false
 }
 
 

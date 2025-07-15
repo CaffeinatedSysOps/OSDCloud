@@ -119,5 +119,7 @@ if (Test-DISMFromOSDCloudUSB){
 }
 #>
 
+remove-item 'c:\Drivers\*.*' -recurse -force -erroraction silentlycontinue | out-null
+
 #Restart Computer from WInPE into Full OS to continue Process
 restart-computer

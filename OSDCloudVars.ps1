@@ -39,11 +39,11 @@ $OSLanguage = 'en-us'
 $Global:MyOSDCloud = [ordered]@{
     Restart = [bool]$false  #Enables OSDCloud automatically restarting
     RecoveryPartition = [bool]$true #Ensures a Recover partition is created, True is default unless on VM
-    OEMActivation = [bool]$True #Attempts to look up the Windows Code in UEFI and activate Windows OS (SetupComplete Phase)
+    OEMActivation = [bool]$true #Attempts to look up the Windows Code in UEFI and activate Windows OS (SetupComplete Phase)
     WindowsUpdate = [bool]$true #Runs Windows Updates during Setup Complete
     WindowsUpdateDrivers = [bool]$true #Runs WU for Drivers during Setup Complete
     WindowsDefenderUpdate = [bool]$true #Run Defender Platform and Def updates during Setup Complete
-    SetTimeZone = [bool]$True #Set the Timezone based on the IP Address
+    SetTimeZone = [bool]$true #Set the Timezone based on the IP Address
     ClearDiskConfirm = [bool]$false #Skip the Confirmation for wiping drive before format
     ShutdownSetupComplete = [bool]$false #After Setup Complete, instead of Restarting to OOBE, just Shutdown
     SyncMSUpCatDriverUSB = [bool]$false #Sync any MS Update Drivers during WinPE to Flash Drive, saves time in future runs
@@ -53,7 +53,7 @@ $Global:MyOSDCloud = [ordered]@{
 	Bitlocker = [bool]$false
 	CheckSHA1 = [bool]$true
 	MSCatalogFirmware = [bool]$true
-	SkipOOBEDeploy = [bool]$true
+	SkipOOBEDeploy = [bool]$false
  SetWiFi = [bool]$false
 }
 

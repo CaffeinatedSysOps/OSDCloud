@@ -24,7 +24,8 @@ If you know to know a full list of variables, look here: https://github.com/OSDe
 $ScriptName = 'OSDCloudVars'
 $ScriptVersion = '25.7.10.3'
 $ScriptStamp = 'dev'
-Write-Host -ForegroundColor Green "$ScriptName $ScriptVersion $ScriptStamp"
+$Stability = 'unstable'
+Write-Host -ForegroundColor Green "$ScriptName $ScriptVersion $ScriptStamp $Stability"
 
 #Variables to define the Windows OS / Edition etc to be applied during OSDCloud
 $OSVersion = 'Windows 11' #Used to Determine Driver Pack
@@ -40,8 +41,8 @@ $Global:MyOSDCloud = [ordered]@{
     Restart = [bool]$false  #Enables OSDCloud automatically restarting
     RecoveryPartition = [bool]$true #Ensures a Recover partition is created, True is default unless on VM
     OEMActivation = [bool]$true #Attempts to look up the Windows Code in UEFI and activate Windows OS (SetupComplete Phase)
-    WindowsUpdate = [bool]$true #Runs Windows Updates during Setup Complete
-    WindowsUpdateDrivers = [bool]$false #Runs WU for Drivers during Setup Complete
+    WindowsUpdate = [bool]$false #Runs Windows Updates during Setup Complete
+    WindowsUpdateDrivers = [bool]$true #Runs WU for Drivers during Setup Complete
     WindowsDefenderUpdate = [bool]$false #Run Defender Platform and Def updates during Setup Complete
     SetTimeZone = [bool]$true #Set the Timezone based on the IP Address
     ClearDiskConfirm = [bool]$false #Skip the Confirmation for wiping drive before format

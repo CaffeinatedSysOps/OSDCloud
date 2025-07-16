@@ -22,7 +22,7 @@ If you know to know a full list of variables, look here: https://github.com/OSDe
 
 
 $ScriptName = 'OSDCloudVars'
-$ScriptVersion = '25.7.10.3'
+$ScriptVersion = '25.7.16.3'
 $ScriptStamp = 'prod'
 $Stability = 'stable'
 Write-Host -ForegroundColor Green "$ScriptName $ScriptVersion $ScriptStamp $Stability"
@@ -48,15 +48,15 @@ $Global:MyOSDCloud = [ordered]@{
     ClearDiskConfirm = [bool]$false #Skip the Confirmation for wiping drive before format
     ShutdownSetupComplete = [bool]$false #After Setup Complete, instead of Restarting to OOBE, just Shutdown
     SyncMSUpCatDriverUSB = [bool]$false #Sync any MS Update Drivers during WinPE to Flash Drive, saves time in future runs
-	ZTI = [bool]$true
-	SkipAutopilot = [bool]$true #autopilotconfig.json insecure and deprecated https://msendpointmgr.com/2024/03/25/autopilot-tenant-security-risk/
-	AutopilotJsonObject = [bool]$false
-	Bitlocker = [bool]$false
-	CheckSHA1 = [bool]$true
-	MSCatalogFirmware = [bool]$true
-	SkipOOBEDeploy = [bool]$false
- SetWiFi = [bool]$false
- ScreenshotCapture = $false
+	ZTI = [bool]$true #Appply zero touch indicator behavior
+	SkipAutopilot = [bool]$true #skip Autopilot json config autopilotconfig.json insecure and deprecated https://msendpointmgr.com/2024/03/25/autopilot-tenant-security-risk/
+	AutopilotJsonObject = [bool]$false #deny above
+	Bitlocker = [bool]$false #bypass and allow autopilot
+	CheckSHA1 = [bool]$true #validate hash for esd
+	MSCatalogFirmware = [bool]$true #allow catalog firmware updates 
+	SkipOOBEDeploy = [bool]$false #bypass this phase
+ SetWiFi = [bool]$false #explicit deny code branch
+ ScreenshotCapture = $false #explicit deny code branch
 }
 
 

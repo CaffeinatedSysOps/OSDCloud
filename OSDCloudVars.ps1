@@ -23,8 +23,8 @@ If you know to know a full list of variables, look here: https://github.com/OSDe
 
 $ScriptName = 'OSDCloudVars'
 $ScriptVersion = '25.7.10.3'
-$ScriptStamp = 'dev'
-$Stability = 'unstable'
+$ScriptStamp = 'prod'
+$Stability = 'stable'
 Write-Host -ForegroundColor Green "$ScriptName $ScriptVersion $ScriptStamp $Stability"
 
 #Variables to define the Windows OS / Edition etc to be applied during OSDCloud

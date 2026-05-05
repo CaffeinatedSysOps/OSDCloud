@@ -29,8 +29,8 @@ Write-Host -ForegroundColor Green "$ScriptName $ScriptVersion $ScriptStamp $Stab
 
 #Variables to define the Windows OS / Edition etc to be applied during OSDCloud
 $OSVersion = 'Windows 11' #Used to Determine Driver Pack
-$OSReleaseID = '23H2' #Used to Determine Driver Pack
-$OSName = 'Windows 11 23H2 x64'
+$OSReleaseID = '25H2' #Used to Determine Driver Pack
+$OSName = 'Windows 11 25H2 x64'
 $OSEdition = 'Pro'
 $OSActivation = 'Retail'
 $OSLanguage = 'en-us'
